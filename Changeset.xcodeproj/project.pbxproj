@@ -22,6 +22,7 @@
 		CC41787F1C6EF41000296FD8 /* Changeset.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 29828DC91C2A899D0056284E /* Changeset.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC4178841C6EF88B00296FD8 /* Changeset+Naive.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4178831C6EF88B00296FD8 /* Changeset+Naive.swift */; };
 		CCDD53621C7D901F00FEBCFC /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD53611C7D901F00FEBCFC /* CollectionViewController.swift */; };
+		D4A472D41D2A932500059FBC /* Changeset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29828DE31C2A8BD40056284E /* Changeset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		CC41787B1C6EF39100296FD8 /* UIKit+Changeset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Changeset.swift"; sourceTree = "<group>"; };
 		CC4178831C6EF88B00296FD8 /* Changeset+Naive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Changeset+Naive.swift"; sourceTree = "<group>"; };
 		CCDD53611C7D901F00FEBCFC /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		D4A472CC1D2A90EF00059FBC /* Changeset.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Changeset.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4A472C81D2A90EF00059FBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,6 +132,7 @@
 				29828DC91C2A899D0056284E /* Changeset.framework */,
 				29828DD31C2A899E0056284E /* Tests.xctest */,
 				CC4178651C6EE5E000296FD8 /* Changeset.app */,
+				D4A472CC1D2A90EF00059FBC /* Changeset.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,12 +192,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4A472C91D2A90EF00059FBC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		29828DC81C2A899D0056284E /* Changeset */ = {
+		29828DC81C2A899D0056284E /* Changeset iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29828DDD1C2A899E0056284E /* Build configuration list for PBXNativeTarget "Changeset" */;
+			buildConfigurationList = 29828DDD1C2A899E0056284E /* Build configuration list for PBXNativeTarget "Changeset iOS" */;
 			buildPhases = (
 				29828DC41C2A899D0056284E /* Sources */,
 				29828DC51C2A899D0056284E /* Frameworks */,
@@ -198,7 +215,7 @@
 			);
 			dependencies = (
 			);
-			name = Changeset;
+			name = "Changeset iOS";
 			productName = Changeset;
 			productReference = 29828DC91C2A899D0056284E /* Changeset.framework */;
 			productType = "com.apple.product-type.framework";
@@ -240,6 +257,24 @@
 			productReference = CC4178651C6EE5E000296FD8 /* Changeset.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D4A472CB1D2A90EF00059FBC /* Changeset macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4A472D31D2A90EF00059FBC /* Build configuration list for PBXNativeTarget "Changeset macOS" */;
+			buildPhases = (
+				D4A472C71D2A90EF00059FBC /* Sources */,
+				D4A472C81D2A90EF00059FBC /* Frameworks */,
+				D4A472C91D2A90EF00059FBC /* Headers */,
+				D4A472CA1D2A90EF00059FBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Changeset macOS";
+			productName = "Changeset-Mac";
+			productReference = D4A472CC1D2A90EF00059FBC /* Changeset.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,6 +294,9 @@
 					CC4178641C6EE5E000296FD8 = {
 						CreatedOnToolsVersion = 7.3;
 					};
+					D4A472CB1D2A90EF00059FBC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 29828DC31C2A899D0056284E /* Build configuration list for PBXProject "Changeset" */;
@@ -274,7 +312,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29828DC81C2A899D0056284E /* Changeset */,
+				29828DC81C2A899D0056284E /* Changeset iOS */,
+				D4A472CB1D2A90EF00059FBC /* Changeset macOS */,
 				29828DD21C2A899E0056284E /* Tests */,
 				CC4178641C6EE5E000296FD8 /* Test App */,
 			);
@@ -303,6 +342,13 @@
 				CC4178721C6EE5E000296FD8 /* LaunchScreen.storyboard in Resources */,
 				CC41786F1C6EE5E000296FD8 /* Assets.xcassets in Resources */,
 				CC41786D1C6EE5E000296FD8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A472CA1D2A90EF00059FBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,17 +385,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4A472C71D2A90EF00059FBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A472D41D2A932500059FBC /* Changeset.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		29828DD61C2A899E0056284E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29828DC81C2A899D0056284E /* Changeset */;
+			target = 29828DC81C2A899D0056284E /* Changeset iOS */;
 			targetProxy = 29828DD51C2A899E0056284E /* PBXContainerItemProxy */;
 		};
 		CC4178811C6EF41000296FD8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29828DC81C2A899D0056284E /* Changeset */;
+			target = 29828DC81C2A899D0056284E /* Changeset iOS */;
 			targetProxy = CC4178801C6EF41000296FD8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -474,7 +528,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.bondo.changeset;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Changeset;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -491,7 +545,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.bondo.changeset;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Changeset;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -544,6 +598,52 @@
 			};
 			name = Release;
 		};
+		D4A472D11D2A90EF00059FBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fullcontact.Changeset;
+				PRODUCT_NAME = Changeset;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D4A472D21D2A90EF00059FBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fullcontact.Changeset;
+				PRODUCT_NAME = Changeset;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -556,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29828DDD1C2A899E0056284E /* Build configuration list for PBXNativeTarget "Changeset" */ = {
+		29828DDD1C2A899E0056284E /* Build configuration list for PBXNativeTarget "Changeset iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29828DDE1C2A899E0056284E /* Debug */,
@@ -582,6 +682,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D4A472D31D2A90EF00059FBC /* Build configuration list for PBXNativeTarget "Changeset macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A472D11D2A90EF00059FBC /* Debug */,
+				D4A472D21D2A90EF00059FBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
